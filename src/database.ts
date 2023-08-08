@@ -6,7 +6,7 @@ export const client: Client = new Client({
     password: process.env.DB_PASSWORD,
     host: process.env.DB_HOST,
     database: process.env.DB,
-    port: 5432
+    port: Number(process.env.PORT)
 })
 
 export const startDB = async (): Promise<void> => {
